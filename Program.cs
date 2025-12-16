@@ -60,17 +60,15 @@ public class Program
         
         // Lambda for delegate
         MovieAlert alertHandler = msg =>
-        {
-            Console.ForegroundColor = ConsoleColor.Cyan;
+        {   
             Console.WriteLine(msg);
-            Console.ResetColor();
         };
         hindiStore.Notify += alertHandler;
         teluguStore.Notify += alertHandler;
         englishStore.Notify += alertHandler;
         
         
-        // Hard coded movies 
+        // Example movies 
         hindiStore.AddMovie(new Movie("Welcome", 2007, "Hindi"));
         teluguStore.AddMovie(new Movie("Magadheera", 2009, "Telugu"));
         englishStore.AddMovie(new Movie("Home Alone", 1990, "English"));
